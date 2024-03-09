@@ -1,0 +1,34 @@
+[
+    {
+        "id": 1,
+        "name": "Hedgehog",
+        "image": {
+            "card": "./images/card.jpg",
+            "animal": "./images/hedgehog.png"
+        }
+    },
+    {
+        "id": 2,
+        "name": "Fox",
+        "image": {
+            "card": "./images/card.jpg",
+            "animal": "./images/fox.png"
+        }
+    },
+    {
+        "id": 3,
+        "name": "Puppy",
+        "image": {
+            "card": "./images/card.jpg",
+            "animal": "./images/puppy.png"
+        }
+    },
+    {
+        "id": 4,
+        "name": "Panda",
+        "image": {
+            "card": "./images/card.jpg",
+            "animal": "./images/panda.png"
+        }
+    }
+]

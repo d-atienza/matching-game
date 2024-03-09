@@ -1,47 +1,30 @@
 import episodes from "../data/episodes.json";
 import { Footer } from "./Footer";
-
-function Greeting(props) {
-    return <h2>Hello, {props.name}</h2>;
-}
-
-function Sum(props) {
-    return (
-        <p>
-            {props.num1} + {props.num2}= {props.num1 + props.num2}
-        </p>
-    );
-}
-
-function TVEpisode(props) {
-    return (
-        <div>
-            <h2>{props.episodeData.name}</h2>
-        </div>
-    );
-}
+import { TurnCard } from "./CardFlipping";
 
 function MyHeader() {
-    return (
-        <header>
-            <h1>Welcome to my first React app</h1>
-        </header>
-    );
+  return (
+    <header>
+      <h1>Match the pairs!</h1>
+    </header>
+  );
 }
 
 export default function App() {
-    return (
-        <div>
-            <MyHeader />
-            <Greeting name="Dani" />
-            <Greeting name="Bob" />
-            <Greeting name="Huss" />
-            <Greeting name="Neill" />
-            <Sum num1={100} num2={2010} />
-            <Sum num1={39} num2={3} />
-            <TVEpisode episodeData={episodes[0]} />
-            <TVEpisode episodeData={episodes[1]} />
-            <Footer />
-        </div>
-    );
+  return (
+    <div>
+      <MyHeader />
+      <div className="cardsList">
+        <TurnCard animalCard={episodes[0]} />
+        <TurnCard animalCard={episodes[1]} />
+        <TurnCard animalCard={episodes[2]} />
+        <TurnCard animalCard={episodes[3]} />
+        <TurnCard animalCard={episodes[2]} />
+        <TurnCard animalCard={episodes[3]} />
+        <TurnCard animalCard={episodes[0]} />
+        <TurnCard animalCard={episodes[1]} />
+      </div>
+      <Footer />
+    </div>
+  );
 }

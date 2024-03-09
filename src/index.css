@@ -1,7 +1,18 @@
-* {
-    box-sizing: border-box;
+
+.buttons {
+    display: flex;
+    justify-content: center; /* Align child elements horizontally center */
 }
 
-.weird {
-    border: 4px dashed lime;
+.card-image {
+ 
+    width: 20rem;
 }
+
+.cardsList {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around; /* Align child elements horizontally center */
+}
+
