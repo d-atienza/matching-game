@@ -1,4 +1,5 @@
 import { useState } from "react";
+// import { increaaseCounter, decreaaseCounter } from "./cardCounter";
 
 export function TurnCard(props) {
   const backOfCard = <img src={props.animalCard.image.card} />;
@@ -9,19 +10,12 @@ export function TurnCard(props) {
   const setCardFacing = result[1];
 
   function handleCardFlip(outcome) {
-    let counter = 0;
     console.log("increment clicked");
 
-    if (outcome == "down" && counter > 0) {
-      counter = counter - 1;
+    if (outcome == "down") {
       setCardFacing(backOfCard);
-    } else if (outcome == "down" && counter <= 0) {
-      return alert("0 cards have been flipped!");
-    } else if (outcome == "up" && counter < 2) {
-      counter = counter + 1;
+    } else if (outcome == "up") {
       setCardFacing(faceofCard);
-    } else if (outcome == "up" && counter >= 2) {
-      return alert("2 cards already flipped!");
     }
   }
 
